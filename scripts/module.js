@@ -8,7 +8,7 @@ Hooks.once('init', async function() {
   window.addEventListener("roll", (event, type, options) => {
     console.log(event);
     console.log("roll recieved");
-    let roll = new Roll(event.data);
+    let roll = new Roll(event.data.data);
     roll.evaluate();
     roll.toMessage();
   }, false);
