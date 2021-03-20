@@ -7,11 +7,10 @@ Hooks.once('init', async function() {
 
   window.addEventListener("roll", (event, type, options) => {
     console.log(event);
-    console.log(type);
-    console.log(options);
-
     console.log("roll recieved");
-    view1.getInt32(0).toString(16)
+    let roll = new Roll(event.data);
+    roll.evaluate();
+    roll.toMessage();
   }, false);
 });
 
