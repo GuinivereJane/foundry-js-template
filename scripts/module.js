@@ -18,7 +18,6 @@ Hooks.once('init', async function() {
     roll.toMessage();
     console.log(roll);
     console.log(roll.total);
-
   }, false);
 });
 
